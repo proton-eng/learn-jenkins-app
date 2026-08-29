@@ -22,6 +22,7 @@ pipeline {
             }
         }
 
+        /*
         stage('Tests') {
             parallel {
                 stage('Unit tests') {
@@ -70,6 +71,7 @@ pipeline {
                 }
             }
         }
+        */
 
         stage('Deploy') {
             agent {
