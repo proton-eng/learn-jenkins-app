@@ -21,5 +21,14 @@ pipeline {
               '''
             }
         }
+        Stage('Test') {
+      
+            steps {
+              sh '''
+                ls -la
+                test -f build/index.html
+              '''
+            }
+        }
     }
 }
