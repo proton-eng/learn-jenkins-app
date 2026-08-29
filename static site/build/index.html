@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Static Site</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 50px 60px;
+            max-width: 700px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .badge {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .info-box {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+            border-left: 4px solid #667eea;
+            margin-top: 20px;
+        }
+        .info-box h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .info-box ul {
+            list-style: none;
+            padding: 0;
+        }
+        .info-box ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            color: #555;
+        }
+        .info-box ul li:last-child {
+            border-bottom: none;
+        }
+        .info-box ul li strong {
+            color: #333;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #999;
+        }
+        .build-info {
+            display: inline-block;
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Hello, Jenkins!</h1>
+        <div class="badge">✅ Built with Love</div>
+        
+        <p>
+            This static page was built and deployed automatically using 
+            <strong>Jenkins CI/CD Pipeline</strong>.
+        </p>
+        
+        <div class="info-box">
+            <h3>📦 Build Information</h3>
+            <ul>
+                <li><strong>Project:</strong> learn-jenkins-app</li>
+                <li><strong>Status:</strong> <span style="color:#4CAF50;">✓ Success</span></li>
+                <li><strong>Built on:</strong> <span id="build-date"></span></li>
+                <li><strong>Environment:</strong> Production</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <span class="build-info">⚡ Deployed via Jenkins</span>
+        </div>
+        
+        <div class="footer">
+            &copy; 2026 Proton Engineering
+        </div>
+    </div>
+
+    <script>
+        // Auto-populate build date
+        document.getElementById('build-date').textContent = new Date().toLocaleString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit'
+        });
+    </script>
+</body>
+</html>
