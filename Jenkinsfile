@@ -14,6 +14,7 @@ pipeline {
                 sh '''
                     ls -la
                     ls -la
+                    ls -la
                 '''
             }
         }
