@@ -13,11 +13,6 @@ pipeline {
             steps {
                 sh '''
                     ls -la
-                    node --version
-                    npm --version
-                    npm ci
-                    npm run build
-                    ls -la
                 '''
             }
         }
@@ -71,7 +66,7 @@ pipeline {
                 }
             }
         }
-        */
+       
 
         stage('Deploy') {
             agent {
@@ -86,6 +81,6 @@ pipeline {
                     node_modules/.bin/netlify --version
                 '''
             }
-        }
+        } */
     }
 }
