@@ -16,7 +16,7 @@ function App() {
         </a>
       </header>
       <p>
-          Application version: 4
+          Application version: 42
       </p>
     </div>
   );
